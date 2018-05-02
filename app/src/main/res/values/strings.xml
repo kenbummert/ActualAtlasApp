@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Atlas App</string>
+    <string name="map_title">Map Name Here </string>
 </resources>
