@@ -3,7 +3,7 @@ package com.example.bkummert.atlasapp;
 import android.media.Image;
 
 /**
- * Created by bkummert and vikram on 5/2/18.
+ * Created by bkummert and VIKRAMKHER on 5/2/18.
  */
 
 public class Map {
