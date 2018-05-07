@@ -30,7 +30,7 @@ public class AtlasList {
         }
     }
 
-    public List<Map> getMaps() {
+    public List<Map> getMapList() {
         return mMapList;
     }
 
