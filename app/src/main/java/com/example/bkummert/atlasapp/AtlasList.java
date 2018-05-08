@@ -23,14 +23,15 @@ public class AtlasList {
 
     private AtlasList(Context context) {
         mMapList = new ArrayList<>();
-        for (int i = 0; i < 25; i++) {
-            Map map = new Map();
-            map.setTitle("Map " + i);
-            mMapList.add(map);
-        }
+        mMapList.add(new Map("United States"));
+        mMapList.add(new Map("South America"));
+        mMapList.add(new Map("Europe"));
+        mMapList.add(new Map("Africa"));
+        mMapList.add(new Map("Asia"));
+
     }
 
-    public List<Map> getMaps() {
+    public List<Map> getMapList() {
         return mMapList;
     }
 
