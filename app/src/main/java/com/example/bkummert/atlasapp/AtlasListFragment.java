@@ -43,7 +43,7 @@ public class AtlasListFragment extends Fragment {
         private Map mMap;
 
         public MapHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.map_fragment, parent, false));
+            super(inflater.inflate(R.layout.list_maps, parent, false));
             mTitleTextView = (TextView) itemView.findViewById(R.id.map_title);
 
         }
