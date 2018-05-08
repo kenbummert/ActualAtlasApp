@@ -17,8 +17,8 @@ public class Map {
     private UUID mUUID;
     private String mTitle;
 
-    public Map() {
-        mTitle = "map title";
+    public Map(String title) {
+        mTitle = title;
         mUUID = UUID.randomUUID();
 
     }

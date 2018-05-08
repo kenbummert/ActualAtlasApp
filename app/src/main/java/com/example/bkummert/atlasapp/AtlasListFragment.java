@@ -1,5 +1,6 @@
 package com.example.bkummert.atlasapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,6 +46,7 @@ public class AtlasListFragment extends Fragment {
         public MapHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_maps, parent, false));
             mTitleTextView = (TextView) itemView.findViewById(R.id.map_title);
+            itemView.setOnClickListener(this);
 
         }
         public void bind(Map map) {
@@ -54,7 +56,8 @@ public class AtlasListFragment extends Fragment {
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(getActivity(), mMap.getTitle() + " clicked!", Toast.LENGTH_SHORT).show();
+            Intent intent = AtlasActivity.newIntent(getActivity(), mMap.getUUID());
+            startActivity(intent);
         }
     }
 
