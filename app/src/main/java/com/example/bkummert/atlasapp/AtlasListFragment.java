@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -27,10 +29,16 @@ public class AtlasListFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.atlas_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        setHasOptionsMenu(true);
         updateUI();
         return view;
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
+        super.onCreateOptionsMenu(menu, menuInflater);
+        menuInflater.inflate(R.menu.atlas_list_menu, menu);
+    }
     private void updateUI() {
         AtlasList atlasList = AtlasList.get(getActivity());
         List<Map> maps = atlasList.getMapList();
