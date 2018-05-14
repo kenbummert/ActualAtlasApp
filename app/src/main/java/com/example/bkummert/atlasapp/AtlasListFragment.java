@@ -1,10 +1,8 @@
 package com.example.bkummert.atlasapp;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.util.SortedList;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -14,10 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -156,6 +151,7 @@ public class AtlasListFragment extends Fragment {
             mMapList.add(toPosition, model);
             notifyItemMoved(fromPosition, toPosition);
         }
+
         public void animateTo(List<Map> maps) {
             applyAndAnimateRemovals(maps);
             applyAndAnimateAdditions(maps);
